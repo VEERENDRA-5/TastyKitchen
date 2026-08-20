@@ -1,0 +1,17 @@
+.payment-bg {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    background-color: white;
+    color: black;
+    gap: 10px;
+    font-family: "calibri";
+}
+
+@media screen and (max-width:768px) {
+    .payment-bg h1 {
+        font-size: 20px;
+    }
+}

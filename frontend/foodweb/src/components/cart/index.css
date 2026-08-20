@@ -1,0 +1,176 @@
+.cart-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    background-color: white;
+    color: black;
+    gap: 10px;
+    width: 100vw;
+    font-family: "calibri";
+}
+
+.Order-sec {
+    background-color: #F9FBFE;
+    height: 90%;
+    align-items: start;
+    text-align: center;
+    gap: 10px;
+    padding: 0;
+    width: 80%;
+    margin: 30px;
+
+    padding: 20px;
+}
+
+.Order-sec-title {
+    gap: 10px;
+    font-family: 'roboto';
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-bottom: 20px;
+
+}
+
+.Order-sec h1 {
+    font-size: 25px;
+}
+
+.Order-sec li {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    margin: 10px;
+
+}
+
+.Order-sec-img {
+    border-radius: 6px;
+    object-fit: cover;
+    height: 100px;
+    width: 160px;
+}
+
+.add-sec {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+
+.add-sec-quantity {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.add-sec button {
+    height: 30px;
+    width: 25px;
+    border: 0 none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.total-row {
+
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.total-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 80%;
+    margin: 10px auto;
+}
+
+.total-row-button {
+    height: 36px;
+    width: 110px;
+    border-radius: 6px;
+    border-style: solid;
+    background-color: #F7931E;
+    columns: white;
+    font-size: 12px;
+    font-family: 'roboto';
+    margin: 10px;
+
+
+}
+
+@media screen and (max-width:700px) {
+    .Order-sec-img {
+        border-radius: 6px;
+        object-fit: cover;
+        height: 70px;
+        width: 100px;
+    }
+
+    .add-sec {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+
+    .Order-sec-title h1 {
+        font-size: 12px;
+    }
+
+    .cart-container {
+        height: 100%;
+        min-height: 75vh;
+    }
+
+    .Order-sec {
+        background-color: #F9FBFE;
+        height: 90%;
+        align-items: start;
+        text-align: center;
+        gap: 10px;
+        padding: 0;
+        width: 90%;
+        margin: 30px;
+
+        padding: 20px;
+    }
+
+    .add-sec button {
+        height: 10px;
+        width: 0px;
+        border: 0 none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .add-sec-quantity {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .no-ord-img {
+        height: 200px;
+        width: 200px;
+    }
+
+    .no-ord-h1 {
+        font-size: 20px;
+    }
+
+    .no-ord-p {
+        font-size: 15px;
+    }
+
+}

@@ -1,0 +1,39 @@
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    align-items: center;
+    padding: 40px;
+    text-align: center;
+    gap: 20px;
+    font-family: 'roboto';
+
+}
+
+.footer-container h1 {
+    color: #F7931E;
+}
+
+.footer-logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+@media (max-width:768px) {
+    .footer-container h1 {
+        font-size: 24px;
+    }
+
+    .footer-container {
+        display: flex;
+        flex-direction: column;
+        height: 200px;
+        align-items: center;
+        padding: 40px;
+        text-align: center;
+        gap: 10px;
+        font-family: 'roboto';
+
+    }
+}

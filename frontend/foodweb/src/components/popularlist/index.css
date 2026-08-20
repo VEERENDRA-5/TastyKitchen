@@ -1,0 +1,137 @@
+.popular-list-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5f5f5;
+  color: #000000;
+  font-family: 'Roboto', sans-serif;
+  padding: 20px;
+  min-height: 60vh;
+  max-height: 100%;
+}
+
+.popular-container {
+  display: flex;
+  justify-content: space-between;
+  width: 80vw;
+}
+
+
+.popular-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f5f5f5;
+  color: #000000;
+  font-family: 'Roboto', sans-serif;
+  list-style-type: none;
+  padding: 20px;
+  width: 80vw;
+  flex-wrap: wrap;
+
+}
+
+.popular-container h1 {
+  font-family: 'roboto';
+  font-size: 30px;
+}
+
+.popular-dropdown Select {
+  background-color: white;
+  color: black;
+  border-radius: 4px;
+  width: 100px;
+  border-style: solid;
+  margin: auto;
+}
+
+.popular-select {
+  text-align: right;
+}
+
+.popular-dropdown option {
+  border-radius: 8px;
+  text-align: center;
+}
+
+.restaurant-item {
+  display: flex;
+  flex: 0 0 48%;
+  /* Each item takes half the row */
+  box-sizing: border-box;
+  padding: 16px;
+  cursor: auto;
+  min-height: 150px;
+  min-width: 300px;
+  max-width: 300px;
+  max-height: 150px;
+  flex-direction: row;
+  align-items: center;
+  background-color: #ffffff;
+  color: #000000;
+  font-family: 'Roboto', sans-serif;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.25);
+}
+
+.restaurant-item h2 {
+  font-size: 15px;
+}
+
+.restaurant-item p {
+  font-size: 12px;
+}
+
+.restaurant-item img {
+  width: 100px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-right: 10px;
+  margin: 20px;
+  left: 20px;
+}
+
+@media (max-width: 768px) {
+  .popular-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f5f5f5;
+    color: #000000;
+    font-family: 'Roboto', sans-serif;
+    list-style-type: none;
+    padding: 20px;
+    width: 80vw;
+    flex-wrap: wrap;
+
+  }
+
+  .restaurant-item img {
+    width: 120px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-right: 10px;
+    margin: 20px;
+    left: 20px;
+  }
+
+  .restaurant-item {
+
+    max-width: 100%;
+    min-width: 300px;
+    margin-bottom: 15px;
+  }
+
+  .restaurant-item h2 {
+    font-size: 13px;
+  }
+
+  .popular-select p {
+    display: none;
+  }
+}

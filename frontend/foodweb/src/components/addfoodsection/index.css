@@ -1,0 +1,195 @@
+.add-sec-bg {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: white;
+    color: orange;
+    font-family: 'roboto';
+}
+
+.add-banner {
+    background-image: url('https://res.cloudinary.com/dnbiwzizv/image/upload/v1783557460/Frame_279_rt1plv.png');
+    height: 300px;
+    width: 100vw;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 30px;
+    padding-left: 10%;
+    color: rgb(254, 254, 254);
+    gap: 15px;
+}
+
+.add-banner h1 {
+    font-family: 'roboto';
+    font-size: 25px;
+}
+
+.add-banner-img {
+    border-radius: 8px;
+    object-fit: cover;
+    height: 200px;
+    width: 400px;
+}
+
+.fooditems-list {
+    flex-wrap: wrap;
+    flex: 0 0 48%;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    list-style-type: none;
+    width: 92vw;
+}
+
+.fooditems-list li {
+    margin: 20px;
+    padding: 20px;
+    min-height: 200px;
+    min-width: 400px;
+    max-height: 200px;
+    max-width: 400px;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.25);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 10px;
+    color: black;
+
+}
+
+.fooditems-card-img {
+    height: 140px;
+    width: 200px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-left: 20px;
+    margin: 15px;
+}
+
+.fooditems-list li h2 {
+    font-size: 17px;
+
+}
+
+.fooditems-list li p {
+    font-size: 14px;
+
+}
+
+.line {
+    width: "1px";
+    background-color: "#ffffff";
+    margin: "0 20px";
+    height: "30px",
+}
+
+@media screen and (max-width: 768px) {
+    .add-banner-img {
+        height: 150px;
+        width: 200px;
+        order: 0;
+    }
+
+    .add-banner h1 {
+        font-size: 12px;
+    }
+
+    .add-banner {
+        background-image: url('https://res.cloudinary.com/dnbiwzizv/image/upload/v1783557460/Frame_279_rt1plv.png');
+        height: 250px;
+        width: 100vw;
+        margin-top: 15 px;
+        margin-bottom: 30px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 10px;
+        padding-left: 5%;
+        color: rgb(254, 254, 254);
+        gap: 15px;
+    }
+
+    .add-banner p {
+        font-size: 10px;
+    }
+
+    .compliements {
+        font-size: 10px;
+    }
+
+    .compliements FontAwesomeIcon {
+        font-size: 10px;
+        gap: 5px;
+    }
+
+    .rating-div {
+        display: flex;
+        margin: 5px;
+
+
+    }
+
+    .line {
+        display: none;
+    }
+
+    .fooditems-list li {
+        height: 70px;
+        width: 70px
+    }
+
+    .fooditems-card-img {
+        height: 100px;
+        width: 150px;
+    }
+
+    .fooditems-list li {
+        margin: 10px;
+        padding: 10px;
+        min-height: 150px;
+        min-width: 320px;
+        max-height: 150px;
+        max-width: 320px;
+        box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.25);
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        border-radius: 10px;
+        color: black;
+
+    }
+
+    .fooditems-list {
+        flex-wrap: wrap;
+        flex: 0 0 48%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: auto;
+        list-style-type: none;
+        width: 92vw;
+    }
+
+    .fooditems-list li h2 {
+        font-size: 14px;
+
+    }
+
+    .fooditems-list li p {
+        font-size: 12px;
+
+    }
+
+    .fooditems-list button {
+        height: 28px;
+        width: 78px;
+        font-size: 10px;
+    }
+
+
+
+}
