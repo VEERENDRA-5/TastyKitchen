@@ -30,7 +30,7 @@ class Login extends Component {
     const { username, password } = this.state;
     const userDetails = { username, password };
 
-    const url = "http://localhost:5000/login";
+    const url = `${import.meta.env.VITE_API_URL}/login`;
     const options = {
       method: "POST",
       headers: { "Content-Type": "application/json" },

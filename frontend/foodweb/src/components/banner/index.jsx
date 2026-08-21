@@ -19,11 +19,14 @@ const Banner = () => {
 
     try {
       const token = Cookies.get("token");
-      const response = await axios.get("http://localhost:5000/banners", {
-        headers: {
-          Authorization: `Bearer ${token}`,
+      const response = await axios.get(
+        `${import.meta.env.VITE_API_URL}/banners`,
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
         },
-      });
+      );
       console.log(token);
       if (response.status === 200) {
         setOffersImg(response.data);

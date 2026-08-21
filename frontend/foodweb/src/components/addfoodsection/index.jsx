@@ -31,7 +31,8 @@ const Addfood = () => {
     try {
       const token = Cookies.get("token");
       const response = await axios.get(
-        `http://localhost:5000/restaurantsmenu/${id}`,
+        `${import.meta.env.VITE_API_URL}/restaurantsmenu/${id}`,
+        // `http://localhost:5000/restaurantsmenu/${id}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,

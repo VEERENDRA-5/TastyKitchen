@@ -21,7 +21,7 @@ const PopularList = () => {
     try {
       const token = Cookies.get("token");
       const response = await axios.get(
-        `http://localhost:5000/restaurantsList?sortBy=${sortBy}`,
+        `${import.meta.env.VITE_API_URL}/restaurantsList?sortBy=${sortBy}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
