@@ -94,10 +94,6 @@ npm run dev
 
 ---
 
-## 📸 Preview
-
-## ![Login page](image.png)
-
 ## 📬 Contact
 
 Built by **Veerendra Prasad** — feel free to reach out or connect!
