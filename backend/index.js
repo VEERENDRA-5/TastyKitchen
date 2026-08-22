@@ -9,6 +9,7 @@ const Restaurant = require("./models/restaurants");
 const Banner = require("./models/banners.js");
 const User = require("./models/user.js");
 const RestaurantMenu = require("./models/restaurantsMenu.js");
+const Order = require("./models/order.js");
 
 const app = express();
 app.use(cors());
@@ -134,6 +135,32 @@ app.post("/login", async (req, res) => {
     res.json({ token });
   } catch (e) {
     res.status(500).json({ error: e.message });
+  }
+});
+
+// Place Order
+app.post("/orders", authMiddleware, async (req, res) => {
+  try {
+    const { items, totalAmount } = req.body;
+
+    const user = await User.findById(req.user.id);
+    if (!user) {
+      return res.status(404).json({ message: "User not found" });
+    }
+
+    const order = new Order({
+      userId: user._id,
+      username: user.username,
+      userEmail: user.email,
+      items,
+      totalAmount,
+    });
+
+    await order.save();
+
+    res.status(201).json({ message: "Order placed successfully", order });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
   }
 });
 
