@@ -96,8 +96,10 @@ npm run dev
 
 ## 📬 Contact
 
-Built by **Veerendra Prasad** — feel free to reach out or connect!
+## Built by **Veerendra Prasad** — feel free to reach out or connect!
 
-Linkedin Profile ----"linkedin.com/in/veerendra-prasad-valmiki"
-Github Profile ----- "https://github.com/VEERENDRA-5"
-Gmail ---valmikiveerendraprasad55@gmail.com
+## Linkedin Profile ----"https://www.linkedin.com/in/veerendra-prasad-valmiki"
+
+## Github Profile ----- "https://github.com/VEERENDRA-5"
+
+## Gmail --- valmikiveerendraprasad55@gmail.com
