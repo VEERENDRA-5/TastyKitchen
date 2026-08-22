@@ -1,11 +1,21 @@
+import { useEffect } from "react";
+
 import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
 
 import Header from "../header/index.jsx";
 import Footer from "../footer/index.jsx";
+import { clearCart } from "../../reducers/index.jsx";
 import "./index.css";
 
 const Payment = () => {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(clearCart());
+  }, []);
+
   return (
     <>
       <Header />

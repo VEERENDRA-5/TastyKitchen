@@ -34,11 +34,13 @@ const Orders = createSlice({
         }
       }
     },
+    clearCart: (state) => {
+      state.cartList = [];
+    },
   },
 });
 
-export const { addItem, deleteItem } = Orders.actions;
-
+export const { addItem, deleteItem, clearCart } = Orders.actions;
 const Cartreducer = Orders.reducer;
 
 export default Cartreducer;
