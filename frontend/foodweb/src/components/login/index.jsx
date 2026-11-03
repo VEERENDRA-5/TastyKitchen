@@ -20,11 +20,6 @@ class Login extends Component {
     this.setState({ password: event.target.value });
   };
 
-  //  axios.post("http://localhost:5000/login",userDetails)
-  //   .then(res => {
-  //     Cookies.set("token", res.data.token);
-  //   });
-
   submitForm = async (event) => {
     event.preventDefault();
     const { username, password } = this.state;

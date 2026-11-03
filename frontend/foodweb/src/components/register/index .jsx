@@ -38,26 +38,6 @@ const Register = () => {
     setEmail(event.target.value);
   };
 
-  //   submitForm = async (event) => {
-  //     event.preventDefault();
-  //     const { username, password } = this.state;
-  //     const userDetails = { username, password };
-  //     const url = "https://apis.ccbp.in/login";
-  //     const options = {
-  //       method: "POST",
-  //       body: JSON.stringify(userDetails),
-  //     };
-  //     const response = await fetch(url, options);
-  //     const data = await response.json();
-  //     if (response.ok === true) {
-  //       const { history } = this.props;
-  //       Cookies.set("token", data.jwt_token, { expires: 1 });
-  //       this.props.navigate("/", { replace: true });
-  //     } else {
-  //       this.setState({ submiterr: true, errmsg: data.error_msg });
-  //     }
-  //   };
-
   return (
     <div className="login-bg-container">
       <div className="login-container">

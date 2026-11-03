@@ -37,41 +37,6 @@ const PopularList = () => {
     }
   };
 
-  // const getPopularList = async () => {
-  // setIsLoading(true);
-  // const token = Cookies.get("token");
-  // const url = `https://apis.ccbp.in/restaurants-list?sort_by_rating=${sortBy}`;
-  // const options = {
-  //   method: "GET",
-  //   headers: {
-  //     Authorization: `Bearer ${token}`,
-  //   },
-  // };
-  // const response = await fetch(url, options);
-  // const data = await response.json();
-  // const updatedData = data.restaurants.map((restaurant) => ({
-  //   costForTwo: restaurant.cost_for_two,
-  //   cuisine: restaurant.cuisine,
-  //   groupByTime: restaurant.group_by_time,
-  //   hasOnlineDelivery: restaurant.has_online_delivery,
-  //   hasTableBooking: restaurant.has_table_booking,
-  //   id: restaurant.id,
-  //   imageUrl: restaurant.image_url,
-  //   isDeliveringNow: restaurant.is_delivering_now,
-  //   location: restaurant.location,
-  //   menuType: restaurant.menu_type,
-  //   name: restaurant.name,
-  //   opensAt: restaurant.opens_at,
-  //   userRating: {
-  //     rating: restaurant.user_rating.rating,
-  //     ratingColor: restaurant.user_rating.rating_color,
-  //     ratingText: restaurant.user_rating.rating_text,
-  //     totalReviews: restaurant.user_rating.total_reviews,
-  //   },
-  // }));
-  // setPopular(updatedData);
-  // setIsLoading(false);
-  // };
   return (
     <div className="popular-list-container">
       <div className="popular-container">

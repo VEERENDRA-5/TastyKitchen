@@ -6,12 +6,12 @@ import axios from "axios";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import Cookies from "js-cookie";
 
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 
 import Header from "../header/index.jsx";
 import Footer from "../footer/index.jsx";
 
-import { addItem, deleteItem } from "../../reducers/index.jsx";
+import { addItem } from "../../reducers/index.jsx";
 
 import "./index.css";
 
@@ -21,7 +21,6 @@ const Addfood = () => {
   const { id } = useParams();
 
   useEffect(() => {
-    // getFoodlist();
     getData();
   }, []);
 
@@ -32,7 +31,6 @@ const Addfood = () => {
       const token = Cookies.get("token");
       const response = await axios.get(
         `${import.meta.env.VITE_API_URL}/restaurantsmenu/${id}`,
-        // `http://localhost:5000/restaurantsmenu/${id}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -47,50 +45,6 @@ const Addfood = () => {
       console.log("ERR :", err);
     }
   };
-
-  // const getFoodlist = async () => {
-  //   setloading(true);
-  //   const token = Cookies.get("token");
-  //   const options = {
-  //     method: "GET",
-  //     headers: {
-  //       Authorization: `Bearer ${token}`,
-  //     },
-  //   };
-
-  //   const reponse = await fetch(
-  //     `https://apis.ccbp.in/restaurants-list/${id}`,
-  //     options,
-  //   );
-  //   const data = await reponse.json();
-  //   if (reponse.ok) {
-  //     const updateddata = {
-  //       costForTwo: data.cost_for_two,
-  //       cuisine: data.cuisine,
-  //       foodItems: data.food_items.map((each) => ({
-  //         id: each.id,
-  //         name: each.name,
-  //         cost: each.cost,
-  //         foodType: each.food_type,
-  //         imageUrl: each.image_url,
-  //         rating: each.rating,
-  //       })),
-
-  //       id: data.id,
-  //       name: data.name,
-  //       imageUrl: data.image_url,
-  //       itemsCount: data.items_count,
-  //       location: data.location,
-  //       opensAt: data.opens_at,
-  //       rating: data.rating,
-  //       reviewsCount: data.reviews_count,
-  //     };
-  //     console.log(updateddata);
-  //     setfoodlist(updateddata);
-  //   }
-
-  //   setloading(false);
-  // };
 
   return (
     <>

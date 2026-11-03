@@ -5,12 +5,9 @@ import {
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 
-import { useNavigate } from "react-router-dom";
-
 import "./index.css";
 
 const Footer = () => {
-  const navigate = useNavigate();
   return (
     <div className="footer-container">
       <div className="footer-logo-container">

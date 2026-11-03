@@ -10,7 +10,6 @@ const Banner = () => {
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
-    // getOffersImg();
     getData();
   }, []);
 
@@ -37,27 +36,6 @@ const Banner = () => {
     }
   };
 
-  // const getOffersImg = async () => {
-  //   setIsLoading(true);
-  //   const token = Cookies.get("token");
-  //   const url = "https://apis.ccbp.in/restaurants-list/offers";
-  //   const options = {
-  //     method: "GET",
-  //     headers: {
-  //       Authorization: `Bearer ${token}`,
-  //     },
-  //   };
-  //   const response = await fetch(url, options);
-  //   if (response.ok) {
-  //     const fetchedData = await response.json();
-  //     const updatedData = fetchedData.offers.map((offer) => ({
-  //       id: offer.id,
-  //       imageUrl: offer.image_url,
-  //     }));
-  //     setOffersImg(updatedData);
-  //   }
-  //   setIsLoading(false);
-  // };
   const settings = {
     dots: true, // show navigation dots
     infinite: true, // loop slides infinitely
