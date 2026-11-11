@@ -54,12 +54,14 @@ const Register = () => {
               USERNAME
             </label>
             <input
+              id="username"
               type="text"
               placeholder="Username"
               className="login-input-field"
               autoComplete="username"
               value={username}
               onChange={onChangeUsername}
+              required
             />
           </div>
           <div className="login-input-container">
@@ -67,6 +69,8 @@ const Register = () => {
               PASSWORD
             </label>
             <input
+              required
+              id="password"
               type="password"
               placeholder="Password"
               className="login-input-field"
@@ -80,6 +84,8 @@ const Register = () => {
               Email
             </label>
             <input
+              required
+              id="email"
               type="email"
               placeholder="Email"
               className="login-input-field"
@@ -87,7 +93,13 @@ const Register = () => {
               onChange={onChangeEmail}
             />
           </div>
-          <p style={{ color: "black" }}>
+          <p
+            style={{
+              color: "black",
+              marginBottom: "10px",
+              fontFamily: "Arial, sans-serif",
+            }}
+          >
             Already Registered <a href="./login">Login</a>
           </p>
 

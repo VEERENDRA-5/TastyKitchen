@@ -8,8 +8,9 @@ class Login extends Component {
   state = {
     username: "",
     password: "",
-    submiterr: "",
+    submiterr: false,
     errmsg: "",
+    loading: false,
   };
 
   onChangeUsername = (event) => {
@@ -22,6 +23,11 @@ class Login extends Component {
 
   submitForm = async (event) => {
     event.preventDefault();
+
+    if (this.state.loading) return; // prevent double click
+
+    this.setState({ loading: true });
+
     const { username, password } = this.state;
     const userDetails = { username, password };
 
@@ -32,20 +38,33 @@ class Login extends Component {
       body: JSON.stringify(userDetails),
     };
 
-    const response = await fetch(url, options);
-    const data = await response.json();
+    try {
+      const response = await fetch(url, options);
 
-    if (response.ok) {
-      Cookies.set("token", data.token, { expires: 1 });
-      this.props.navigate("/", { replace: true });
-    } else {
-      this.setState({ submitErr: true, errMsg: data.message });
+      const data = await response.json();
+
+      if (response.ok) {
+        Cookies.set("token", data.token, { expires: 1 });
+        this.props.navigate("/", { replace: true });
+      } else {
+        this.setState({
+          submiterr: true,
+          errmsg: data.message || "Login failed",
+          loading: false,
+        });
+      }
+    } catch (error) {
+      this.setState({
+        submiterr: true,
+        errmsg: "Server error",
+        loading: false,
+      });
     }
   };
 
   render() {
     const token = Cookies.get("token");
-    const { username, password, submiterr, errmsg } = this.state;
+    const { username, password, submiterr, errmsg, loading } = this.state;
     if (token !== undefined) {
       return <Navigate to="/" />;
     }
@@ -68,6 +87,8 @@ class Login extends Component {
                 USERNAME
               </label>
               <input
+                required
+                id="username"
                 type="text"
                 placeholder="Username"
                 className="login-input-field"
@@ -81,6 +102,8 @@ class Login extends Component {
                 PASSWORD
               </label>
               <input
+                required
+                id="password"
                 type="password"
                 placeholder="Password"
                 className="login-input-field"
@@ -89,12 +112,18 @@ class Login extends Component {
                 onChange={this.onChangePassword}
               />
             </div>
-            <p style={{ color: "black" }}>
+            <p
+              style={{
+                color: "black",
+                marginBottom: "10px",
+                fontFamily: "Arial, sans-serif",
+              }}
+            >
               Don't have an account? <a href="./register">Register</a>
             </p>
 
-            <button type="submit" className="login-button">
-              Login
+            <button type="submit" className="login-button" disabled={loading}>
+              {loading ? "Logging in..." : "Login"}
             </button>
             {submiterr && <p className="error-message">{errmsg}</p>}
           </form>

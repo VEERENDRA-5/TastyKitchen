@@ -26,7 +26,6 @@ const Banner = () => {
           },
         },
       );
-      console.log(token);
       if (response.status === 200) {
         setOffersImg(response.data);
         setIsLoading(false);
